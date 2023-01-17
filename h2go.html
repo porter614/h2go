@@ -1,0 +1,95 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Water Popup</title>
+    <style>
+      span {
+        cursor: pointer;
+      }
+      .number {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 100px;
+      }
+      .header {
+        /* display: flex; */
+      }
+      .minus,
+      .plus {
+        width: 20px;
+        height: 20px;
+        background: #f2f2f2;
+        border-radius: 4px;
+        padding: 8px 5px 8px 5px;
+        border: 1px solid #ddd;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+      .liters {
+        margin: 0px 10px;
+      }
+      input {
+        height: 34px;
+        width: 100px;
+        text-align: center;
+        font-size: 26px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      body {
+        text-align: center;
+        align-items: center;
+      }
+
+      #hydrateImage {
+        width: 100px;
+        margin: 5px;
+      }
+
+      button {
+        margin: 5px;
+        outline: none;
+      }
+
+      button:hover {
+        outline: #80deea dotted thick;
+      }
+
+      progress {
+        /* transform: rotate(-90deg); */
+      }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files
+     -->
+  </head>
+  <body>
+    <div class="body">
+      <div class="header">
+        <img src="./water_droplet.png" id="hydrateImage" />
+        <!-- An Alarm delay of less than the minimum 1 minute will fire
+      in approximately 1 minute increments if released -->
+        <button id="remindMe" value="10">Remind me</button>
+      </div>
+      <div class="number">
+        <span id="minus" class="minus">-</span>
+        <input id="input" class="liters" type="text" value="0" />
+        <span id="plus" class="plus">+</span>
+      </div>
+      <button id="addLiters">Submit</button>
+      <button id="clearLiters">Clear</button>
+      <div>
+        <span>You've drunk </span><span id="totalLiters">0</span
+        ><span> liters today</span>
+      </div>
+      <div>
+        <progress id="progress" value="0" max="4">32%</progress>
+      </div>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>

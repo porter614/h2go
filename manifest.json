@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "h2go",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "permissions": ["alarms", "notifications", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "h2go.html",
+    "default_icon": "water_droplet.png"
+  },
+  "icons": {
+    "16": "water_droplet.png",
+    "32": "water_droplet.png",
+    "48": "water_droplet.png",
+    "128": "water_droplet.png"
+  }
+}
